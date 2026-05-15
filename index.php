@@ -9,16 +9,7 @@ $requete = $bdd->query('SELECT * FROM oeuvres');
 $oeuvres = $requete->fetchAll();
 
 ?>
-
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <title>ArtBox</title>
-</head>
-
-<body>
+<?php require 'header.php'; ?>
 
     <h1>Liste des œuvres</h1>
 
@@ -44,6 +35,4 @@ $oeuvres = $requete->fetchAll();
 
     <?php } ?>
 
-</body>
-
-</html>
+<?php require 'footer.php'; ?>

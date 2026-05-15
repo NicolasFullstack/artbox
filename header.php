@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ArtBox</title>
+</head>
+
+<body>
+
+<header>
+    <h1>ArtBox</h1>
+
+    <nav>
+        <a href="index.php">Accueil</a> |
+        <a href="ajout.php">Ajouter une œuvre</a>
+    </nav>
+
+    <hr>
+</header>

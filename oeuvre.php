@@ -25,14 +25,7 @@ if ($oeuvre === false) {
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title><?php echo $oeuvre['titre']; ?></title>
-</head>
-
-<body>
+<?php require 'header.php'; ?>
 
     <h1><?php echo $oeuvre['titre']; ?></h1>
 
@@ -46,5 +39,4 @@ if ($oeuvre === false) {
         <a href="index.php">Retour à l’accueil</a>
     </p>
 
-</body>
-</html>
+<?php require 'footer.php'; ?>
