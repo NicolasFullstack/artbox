@@ -15,7 +15,7 @@ $oeuvres = $requete->fetchAll();
 
     <?php foreach ($oeuvres as $oeuvre) { ?>
 
-        <div>
+        <div class="oeuvre-card">
 
             <h2>
     <a href="oeuvre.php?id=<?php echo $oeuvre['id']; ?>">

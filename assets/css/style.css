@@ -1,0 +1,50 @@
+body {
+    background-color: #111111;
+    color: #d4af37;
+    font-family: Georgia, serif;
+    margin: 40px;
+}
+
+a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f1d97a;
+}
+
+header,
+footer {
+    text-align: center;
+}
+
+h1,
+h2,
+p,
+label {
+    color: #d4af37;
+}
+
+img {
+    max-width: 300px;
+    border-radius: 10px;
+    display: block;
+    margin-top: 10px;
+}
+
+input,
+textarea,
+button {
+    background-color: white;
+    color: black;
+    padding: 8px;
+    margin-top: 5px;
+}
+.oeuvre-card {
+    background-color: #1e1e1e;
+    border: 1px solid #d4af37;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
