@@ -27,13 +27,13 @@ if ($oeuvre === false) {
 ?>
 <?php require 'header.php'; ?>
 
-    <h1><?php echo $oeuvre['titre']; ?></h1>
+    <h1><?php echo htmlspecialchars($oeuvre['titre']); ?></h1>
 
-    <p><?php echo $oeuvre['artiste']; ?></p>
+    <p><?php echo htmlspecialchars($oeuvre['artiste']); ?></p>
 
-    <img src="<?php echo $oeuvre['image']; ?>" width="500">
+    <img src="<?php echo htmlspecialchars($oeuvre['image']); ?>" width="500">
 
-    <p><?php echo $oeuvre['description']; ?></p>
+    <p><?php echo htmlspecialchars($oeuvre['description']); ?></p>
 
     <p>
         <a href="index.php">Retour à l’accueil</a>

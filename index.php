@@ -19,15 +19,15 @@ $oeuvres = $requete->fetchAll();
 
             <h2>
     <a href="oeuvre.php?id=<?php echo $oeuvre['id']; ?>">
-        <?php echo $oeuvre['titre']; ?>
+        <?php echo htmlspecialchars($oeuvre['titre']); ?>
     </a>
 </h2>
 
-            <p><?php echo $oeuvre['artiste']; ?></p>
+            <p><?php echo htmlspecialchars($oeuvre['artiste']); ?></p>
 
             <img src="<?php echo $oeuvre['image']; ?>" width="300">
 
-            <p><?php echo $oeuvre['description']; ?></p>
+            <p><?php echo htmlspecialchars($oeuvre['description']); ?></p>
 
         </div>
 
