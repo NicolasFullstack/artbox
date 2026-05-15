@@ -1,4 +1,18 @@
-<?php require 'header.php'; ?>
+<?php
+
+session_start();
+
+if (!isset($_SESSION['user'])) {
+
+    header('Location: connexion.php');
+    exit;
+}
+
+require 'header.php';
+
+?>
+
+<main>
 
 <h1>Ajouter une nouvelle œuvre</h1>
 
@@ -39,5 +53,7 @@
 <p>
     <a href="index.php">Retour à l’accueil</a>
 </p>
+
+</main>
 
 <?php require 'footer.php'; ?>

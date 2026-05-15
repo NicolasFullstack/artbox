@@ -11,6 +11,8 @@ $oeuvres = $requete->fetchAll();
 ?>
 <?php require 'header.php'; ?>
 
+<main>
+
     <h1>Liste des œuvres</h1>
 
     <div class="oeuvres-grid">
@@ -36,5 +38,7 @@ $oeuvres = $requete->fetchAll();
     <?php } ?>
 
     </div>
+
+    </main>
 
 <?php require 'footer.php'; ?>
