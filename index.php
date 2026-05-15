@@ -13,6 +13,8 @@ $oeuvres = $requete->fetchAll();
 
     <h1>Liste des œuvres</h1>
 
+    <div class="oeuvres-grid">
+        
     <?php foreach ($oeuvres as $oeuvre) { ?>
 
         <div class="oeuvre-card">
