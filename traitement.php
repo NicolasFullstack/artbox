@@ -2,19 +2,19 @@
 
 require 'bdd.php';
 
+$titre = trim($_POST['titre'] ?? '');
+$artiste = trim($_POST['artiste'] ?? '');
+$image = trim($_POST['image'] ?? '');
+$description = trim($_POST['description'] ?? '');
+
 if (
-    empty($_POST['titre']) ||
-    empty($_POST['artiste']) ||
-    empty($_POST['image']) ||
-    empty($_POST['description'])
+    empty($titre) ||
+    empty($artiste) ||
+    empty($image) ||
+    empty($description)
 ) {
     die('Tous les champs sont obligatoires.');
 }
-
-$titre = htmlspecialchars($_POST['titre']);
-$artiste = htmlspecialchars($_POST['artiste']);
-$image = htmlspecialchars($_POST['image']);
-$description = htmlspecialchars($_POST['description']);
 
 if (strlen($description) < 3) {
     die('La description est trop courte.');
@@ -23,6 +23,11 @@ if (strlen($description) < 3) {
 if (strlen($image) < 3) {
     die('Le lien de l’image est invalide.');
 }
+
+$titre = htmlspecialchars($titre);
+$artiste = htmlspecialchars($artiste);
+$image = htmlspecialchars($image);
+$description = htmlspecialchars($description);
 
 $bdd = connexion();
 

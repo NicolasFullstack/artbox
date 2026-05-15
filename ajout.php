@@ -1,43 +1,43 @@
 <?php require 'header.php'; ?>
 
-    <h1>Ajouter une nouvelle œuvre</h1>
+<h1>Ajouter une nouvelle œuvre</h1>
 
-    <form action="traitement.php" method="post">
+<form action="traitement.php" method="post">
 
-        <div>
-            <label for="titre">Nom de l’œuvre</label><br>
-            <input type="text" id="titre" name="titre">
-        </div>
+    <div>
+        <label for="titre">Nom de l’œuvre</label><br>
+        <input type="text" id="titre" name="titre" required>
+    </div>
 
-        <br>
+    <br>
 
-        <div>
-            <label for="artiste">Nom de l’artiste</label><br>
-            <input type="text" id="artiste" name="artiste">
-        </div>
+    <div>
+        <label for="artiste">Nom de l’artiste</label><br>
+        <input type="text" id="artiste" name="artiste" required>
+    </div>
 
-        <br>
+    <br>
 
-        <div>
-            <label for="image">Lien vers l’image</label><br>
-            <input type="text" id="image" name="image">
-        </div>
+    <div>
+        <label for="image">Lien vers l’image</label><br>
+        <input type="text" id="image" name="image" required>
+    </div>
 
-        <br>
+    <br>
 
-        <div>
-            <label for="description">Description</label><br>
-            <textarea id="description" name="description"></textarea>
-        </div>
+    <div>
+        <label for="description">Description</label><br>
+        <textarea id="description" name="description" required></textarea>
+    </div>
 
-        <br>
+    <br>
 
-        <button type="submit">Ajouter l’œuvre</button>
+    <button type="submit">Ajouter l’œuvre</button>
 
-    </form>
+</form>
 
-    <p>
-        <a href="index.php">Retour à l’accueil</a>
-    </p>
+<p>
+    <a href="index.php">Retour à l’accueil</a>
+</p>
 
 <?php require 'footer.php'; ?>

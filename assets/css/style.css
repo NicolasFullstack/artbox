@@ -5,6 +5,16 @@ body {
     margin: 40px;
 }
 
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
 a {
     color: #d4af37;
     text-decoration: none;
@@ -14,11 +24,6 @@ a:hover {
     color: #f1d97a;
 }
 
-header,
-footer {
-    text-align: center;
-}
-
 h1,
 h2,
 p,
@@ -26,11 +31,52 @@ label {
     color: #d4af37;
 }
 
-img {
-    max-width: 300px;
+.oeuvres-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.oeuvre-card {
+    width: 400px;
+    height: 620px;
+
+    background-color: #1e1e1e;
+    border: 1px solid #d4af37;
+
+    padding: 20px;
     border-radius: 10px;
-    display: block;
-    margin-top: 10px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.oeuvre-image {
+    width: 100%;
+    height: 380px;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+.oeuvre-card h2,
+.oeuvre-card p {
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+.oeuvre-description {
+    max-height: 4.5em;
+
+    overflow-y: auto;
+
+    line-height: 1.5;
+
+    padding-right: 5px;
 }
 
 input,
@@ -38,31 +84,18 @@ textarea,
 button {
     background-color: white;
     color: black;
+
     padding: 8px;
     margin-top: 5px;
-}
-.oeuvre-card {
-    background-color: #1e1e1e;
-    border: 1px solid #d4af37;
-    padding: 20px;
-    border-radius: 10px;
-}
-.oeuvres-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+
+    border-radius: 5px;
+    border: none;
 }
 
-.oeuvre-card {
-    background-color: #1e1e1e;
-    border: 1px solid #d4af37;
-    padding: 20px;
-    border-radius: 10px;
+button {
+    cursor: pointer;
 }
 
-.oeuvre-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
+button:hover {
+    background-color: #dddddd;
 }

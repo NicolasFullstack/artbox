@@ -1,5 +1,3 @@
-<hr>
-
 <footer>
     <p>© ArtBox</p>
 </footer>

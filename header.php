@@ -18,5 +18,4 @@
         <a href="ajout.php">Ajouter une œuvre</a>
     </nav>
 
-    <hr>
 </header>
