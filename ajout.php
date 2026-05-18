@@ -26,8 +26,8 @@ require 'header.php';
     <br>
 
     <div>
-        <label for="artiste">Nom de l’artiste</label><br>
-        <input type="text" id="artiste" name="artiste" required>
+        <label for="auteur">Nom de l’auteur</label><br>
+        <input type="text" id="auteur" name="auteur" required>
     </div>
 
     <br>

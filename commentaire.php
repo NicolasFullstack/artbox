@@ -52,7 +52,7 @@ $commentaires = $requeteCommentaires->fetchAll();
 
     <h1><?php echo htmlspecialchars($oeuvre['titre']); ?></h1>
 
-    <p><?php echo htmlspecialchars($oeuvre['artiste']); ?></p>
+    <p><?php echo htmlspecialchars($oeuvre['auteur']); ?></p>
 
     <img
         class="oeuvre-image"

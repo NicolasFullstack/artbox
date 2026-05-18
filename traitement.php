@@ -3,13 +3,13 @@
 require 'bdd.php';
 
 $titre = trim($_POST['titre'] ?? '');
-$artiste = trim($_POST['artiste'] ?? '');
+$auteur = trim($_POST['auteur'] ?? '');
 $image = trim($_POST['image'] ?? '');
 $description = trim($_POST['description'] ?? '');
 
 if (
     empty($titre) ||
-    empty($artiste) ||
+    empty($auteur) ||
     empty($image) ||
     empty($description)
 ) {
@@ -25,20 +25,20 @@ if (strlen($image) < 3) {
 }
 
 $titre = htmlspecialchars($titre);
-$artiste = htmlspecialchars($artiste);
+$auteur = htmlspecialchars($auteur);
 $image = htmlspecialchars($image);
 $description = htmlspecialchars($description);
 
 $bdd = connexion();
 
 $requete = $bdd->prepare('
-    INSERT INTO oeuvres(titre, artiste, image, description)
-    VALUES(:titre, :artiste, :image, :description)
+    INSERT INTO oeuvres(titre, auteur, image, description)
+    VALUES(:titre, :auteur, :image, :description)
 ');
 
 $requete->execute([
     'titre' => $titre,
-    'artiste' => $artiste,
+    'auteur' => $auteur,
     'image' => $image,
     'description' => $description
 ]);

@@ -9,6 +9,7 @@ $requete = $bdd->query('SELECT * FROM oeuvres');
 $oeuvres = $requete->fetchAll();
 
 ?>
+
 <?php require 'header.php'; ?>
 
 <main>
@@ -17,28 +18,33 @@ $oeuvres = $requete->fetchAll();
 
     <div class="oeuvres-grid">
 
-    <?php foreach ($oeuvres as $oeuvre) { ?>
+        <?php foreach ($oeuvres as $oeuvre) { ?>
 
-        <div class="oeuvre-card">
+            <div class="oeuvre-card">
 
-    <h2>
-        <a href="oeuvre.php?id=<?php echo $oeuvre['id']; ?>">
-            <?php echo htmlspecialchars($oeuvre['titre']); ?>
-        </a>
-    </h2>
+                <h2>
+                    <a href="oeuvre.php?id=<?php echo htmlspecialchars($oeuvre['id']); ?>">
+                        <?php echo htmlspecialchars($oeuvre['titre']); ?>
+                    </a>
+                </h2>
 
-    <p><?php echo htmlspecialchars($oeuvre['artiste']); ?></p>
+                <p><?php echo htmlspecialchars($oeuvre['auteur']); ?></p>
 
-    <img class="oeuvre-image" src="<?php echo htmlspecialchars($oeuvre['image']); ?>" alt="<?php echo htmlspecialchars($oeuvre['titre']); ?>">
+                <a href="oeuvre.php?id=<?php echo htmlspecialchars($oeuvre['id']); ?>">
+                    <img
+                        src="<?php echo htmlspecialchars($oeuvre['image']); ?>"
+                        alt="<?php echo htmlspecialchars($oeuvre['titre']); ?>"
+                    >
+                </a>
 
-    <p class="oeuvre-description"><?php echo htmlspecialchars($oeuvre['description']); ?></p>
+                <p><?php echo htmlspecialchars($oeuvre['description']); ?></p>
 
-</div>
+            </div>
 
-    <?php } ?>
+        <?php } ?>
 
     </div>
 
-    </main>
+</main>
 
 <?php require 'footer.php'; ?>

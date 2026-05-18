@@ -49,10 +49,10 @@ require 'header.php';
 
     <h1><?php echo htmlspecialchars($oeuvre['titre']); ?></h1>
 
-    <p><?php echo htmlspecialchars($oeuvre['artiste']); ?></p>
+    <p><?php echo htmlspecialchars($oeuvre['auteur']); ?></p>
 
     <img
-        class="oeuvre-image"
+        class="oeuvre-detail-image"
         src="<?php echo htmlspecialchars($oeuvre['image']); ?>"
         alt="<?php echo htmlspecialchars($oeuvre['titre']); ?>"
     >
