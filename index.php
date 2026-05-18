@@ -75,24 +75,23 @@ $oeuvres = $requete->fetchAll();
                 pour ouvrir la page détail
                 -->
                 <a href="oeuvre.php?id=<?php echo htmlspecialchars($oeuvre['id']); ?>">
-
-                    <img
-
-                        <!--
-                        src contient le chemin de l’image
+<!-- src contient le chemin de l’image
                         stocké dans la base de données
                         -->
+                    <img
+
+                        
                         src="<?php echo htmlspecialchars($oeuvre['image']); ?>"
 
-                        <!--
+                        
+                        alt="<?php echo htmlspecialchars($oeuvre['titre']); ?>"
+                    >
+<!--
                         alt est important pour :
                         - accessibilité
                         - SEO
                         - affichage si image absente
                         -->
-                        alt="<?php echo htmlspecialchars($oeuvre['titre']); ?>"
-                    >
-
                 </a>
 
                 <!-- Affiche la description de l’œuvre -->
