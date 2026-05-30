@@ -42,18 +42,25 @@ if (
 // Vérifie que la description contient au moins 3 caractères
 if (strlen($description) < 3) {
 
-    // Arrête le script si description trop courte
+    // Arrête le script si la description est trop courte
     die('La description est trop courte.');
 }
 
 
-// Vérifie que le lien image contient au moins 3 caractères
-if (strlen($image) < 3) {
+// Vérifie que l’image est soit :
+// - une vraie URL web
+// - soit un chemin local du projet commençant par assets/
+if (
 
-    // Arrête le script si le lien semble invalide
-    die('Le lien de l’image est invalide.');
+    !filter_var($image, FILTER_VALIDATE_URL)
+
+    && !str_starts_with($image, 'assets/')
+
+) {
+
+    // Arrête le script si le format du lien image est invalide
+    die('Lien image invalide.');
 }
-
 
 // Sécurise le titre contre les injections HTML
 $titre = htmlspecialchars($titre);
